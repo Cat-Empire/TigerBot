@@ -1,0 +1,21 @@
+{
+  "name": "tiger-bot",
+  "version": "1.0.0",
+  "description": "full-fledged discord bot ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord-bot"
+  ],
+  "author": "MohammadMehran Shahidi",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0"
+  }
+}
