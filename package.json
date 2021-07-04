@@ -12,6 +12,7 @@
   "author": "MohammadMehran Shahidi",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/speech": "^4.5.2",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0"
   },

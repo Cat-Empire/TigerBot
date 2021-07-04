@@ -1,10 +1,16 @@
 const dotenv = require("dotenv");
+const speech = require('@google-cloud/speech');
+const client = new speech.SpeechClient();
+
 dotenv.config();
 
+async function quickstart() {
+  const gcsUri = 'gs://cloud-samples-data/speech/brooklyn_bridge.raw';
+}
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const prefix = "!";
+const prefix = "%";
 
 client.once("ready", () => {
   console.log("Ready!");
@@ -17,8 +23,8 @@ client.on("message", (message) => {
     message.channel.send("Boop.");
   } else if (message.content === `${prefix}server`) {
       message.channel.send(`this server's name is: ${message.guild.name}`)
-  } else if (message.content === `${prefix}user-info`) {
-      message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`)
+  } else if (message.content === `${prefix}hi`) {
+      message.channel.send(`Hello dear ${message.author.username}`)
   }
 });
 

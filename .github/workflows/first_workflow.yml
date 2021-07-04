@@ -1,0 +1,21 @@
+name: Deployment Workflow
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-lates
+    steps:
+    - name: testing ssh server connection
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.OMG_SECRET }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd TigerBot
+          git pull origin main
+          git status
