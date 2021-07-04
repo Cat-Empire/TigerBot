@@ -1,12 +1,7 @@
 const dotenv = require("dotenv");
-const speech = require('@google-cloud/speech');
-const client = new speech.SpeechClient();
 
 dotenv.config();
 
-async function quickstart() {
-  const gcsUri = 'gs://cloud-samples-data/speech/brooklyn_bridge.raw';
-}
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
