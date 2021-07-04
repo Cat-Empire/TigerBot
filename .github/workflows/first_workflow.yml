@@ -18,4 +18,8 @@ jobs:
         script: |
           cd TigerBot
           git pull origin main
-          git status
+          tmux kill-session -t TigerBot
+          tmux new -s TigerBot
+          node index.js
+
+          
