@@ -19,7 +19,6 @@ jobs:
           cd TigerBot
           git pull origin main
           tmux kill-session -t TigerBot
-          tmux new -s TigerBot
-          node index.js
-          exit
+          tmux new -s TigerBot -d
+          tmux send -t TigerBot 'node index.js' ENTER
           
