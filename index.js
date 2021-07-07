@@ -10,10 +10,15 @@ const prefix = "%";
 client.once("ready", () => {
   console.log("Ready!");
 });
-
+data = {};
 client.on("message", (message) => {
   if (message.content === `${prefix}ping`) {
-    message.channel.send("Pong.");
+    if (data[message.author.username] !== undefined)
+      data[message.author.username] += 1
+    else
+      data[message.author.username] = 1;
+    
+    message.channel.send(`You ${message.author.username} issued ping for ${data[message.author.username]} times.`);
   } else if (message.content === `${prefix}beep`) {
     message.channel.send("Boop!!");
   }else if (message.content === `${prefix}cat`) {
