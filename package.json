@@ -1,22 +1,28 @@
 {
-  "name": "tiger-bot",
+  "name": "kitty-bot",
   "version": "1.0.0",
-  "description": "full-fledged discord bot ",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev -r dotenv/config --no-notify --respawn --transpile-only src/index",
+    "start": "node -r dotenv/config dist/index",
+    "clean": "rm -rf dist",
+    "build": "npm -s run clean && tsc"
   },
-  "keywords": [
-    "discord-bot"
-  ],
-  "author": "MohammadMehran Shahidi",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@google-cloud/speech": "^4.5.2",
-    "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0"
-  },
   "devDependencies": {
-    "eslint": "^7.29.0"
+    "@types/node": "^16.4.1",
+    "eslint": "^7.31.0",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "mongoose": "^5.13.3"
   }
 }
